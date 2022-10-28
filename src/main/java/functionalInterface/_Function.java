@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 public class _Function {
     public static void main(String[] args) {
+        //Function takes 1 argument and produces one Result
         int increment = incrementByOne(1);
         System.out.println(increment);
 
@@ -20,7 +21,9 @@ public class _Function {
                 .andThen(multiplyBy10Function);
         System.out.println(addBy1AndThenMultiplyBy10.apply(4));
 
-        // BiFunktion
+        // BiFunktion takes 2 Arguments and produces 1 result
+        System.out.println(incrementByOneAndMultiplyBiFunction.apply(4, 100));
+        System.out.println(incrementByOneAndMultiply(4, 100));
 
     }
 
@@ -34,7 +37,7 @@ public class _Function {
         return number + 1;
     }
 
-    BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
+    static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
             (numberToIncrementByOne, numberToMultiplyBy)
                     -> (numberToIncrementByOne + 1) * numberToMultiplyBy;
 
