@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.Spliterator;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static org.example.Main.Gender.*;
